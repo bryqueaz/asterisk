@@ -41,5 +41,12 @@ sudo apt-get update
 * `sudo chown -R asterisk:asterisk /var/spool/asterisk /var/run/asterisk /etc/asterisk /var/{lib,log,spool}/asterisk /usr/lib/asterisk`
 * `sudo systemctl reboot`
 
+## Prueba de conectividad de asterisk en Ubuntu 20.04.5 LTS -> asterisk-certified-16.8-cert14
+
+* `sudo asterisk -vvvvrc`
+* `reload`
+* `dialplan reload`
+* `queue show`
+
 
 
