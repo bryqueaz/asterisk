@@ -11,3 +11,9 @@ Actualizar repos
 sudo apt-get update
 
 ```
+## Instalacion de asterisk en Ubuntu -> asterisk-certified-16.8-cert14
+
+* `cd /usr/src`: 
+* `sudo wget https://downloads.asterisk.org/pub/telephony/certified-asterisk/releases/asterisk-certified-16.8-cert14.tar.gz`: 
+* `sudo tar -xvzf asterisk-certified-16.8-cert14.tar.gz`: 
+
