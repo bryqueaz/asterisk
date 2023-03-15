@@ -14,6 +14,14 @@ sudo apt-get update
 ## Instalacion de asterisk en Ubuntu 20.04.5 LTS -> asterisk-certified-16.8-cert14
 
 * `cd /usr/src`
+* `sudo apt-get install build-essential wget libssl-dev libncurses5-dev libnewt-dev libxml2-dev linux-headers-$(uname -r) libsqlite3-dev uuid-dev git subversion`
+* `sudo apt-get install build-essential wget libssl-dev libncurses5-dev libnewt-dev libxml2-dev linux-headers-$(uname -r) libsqlite3-dev uuid-dev git subversion`
+* `sudo systemctl reboot`
+* `apt-cache search mysql`
+* `sudo apt-get install mysql-server`
+* `sudo apt-get install mysql-client`
+* `apt-get install unixodbc`
+* `apt-get install nginx`
 * `sudo wget https://downloads.asterisk.org/pub/telephony/certified-asterisk/releases/asterisk-certified-16.8-cert14.tar.gz`
 * `sudo tar -xvzf asterisk-certified-16.8-cert14.tar.gz`
 * `cd /usr/src/asterisk-certified-16.8-cert14`
