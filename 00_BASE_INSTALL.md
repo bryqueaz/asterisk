@@ -101,3 +101,11 @@ Cargar modulo de chan sip
 Verificacion se debe conectar a la consola de asterisk: 
 * `sudo asterisk -vvvvvrc`
 
+Cargar el modulo d chan_sip.so
+
+* `sudo vim /etc/asterisk/modules.conf`
+* Agregar la linea: `load => chan_sip.so`
+* sudo /etc/init.d/asterisk restart
+
+
+
