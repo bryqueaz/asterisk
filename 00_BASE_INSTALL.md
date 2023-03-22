@@ -111,7 +111,7 @@ Cargar el modulo d chan_sip.so
 ubuntu@asterisk:~$ sudo cat /etc/asterisk/modules.conf | grep chan_sip
 load => chan_sip.so
 ```
-* sudo /etc/init.d/asterisk restart
+* `sudo /etc/init.d/asterisk restart`
 
 Verificacion se debe conectar a la consola de asterisk:
 * `sudo asterisk -vvvvvrc`
