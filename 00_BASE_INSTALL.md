@@ -98,5 +98,7 @@ Cargar modulo de chan sip
 * `sudo ldconfig`
 * `sudo /etc/init.d/asterisk restart`
 
+Verificacion se debe conectar a la consola de asterisk: 
+* `sudo asterisk -vvvvvrc`
 
 
