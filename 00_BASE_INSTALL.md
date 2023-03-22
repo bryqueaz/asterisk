@@ -106,6 +106,7 @@ Cargar el modulo d chan_sip.so
 * `sudo vim /etc/asterisk/modules.conf`
 * Agregar la linea: `load => chan_sip.so`
 * Verificar el cambio en el archivo
+*
 ```
 ubuntu@asterisk:~$ sudo cat /etc/asterisk/modules.conf | grep chan_sip
 load => chan_sip.so
