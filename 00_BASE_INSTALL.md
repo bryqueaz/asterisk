@@ -66,7 +66,7 @@ sudo apt-get update
 
 ## Configuraion para cargar modulo de chan_sip
 
-Verificacion
+Verificacion se debe conectar a la consola de asterisk: `sudo asterisk -vvvvvrc`
 
 ```
 ubuntu@asterisk:~$ sudo asterisk -vvvvvrc
@@ -85,4 +85,18 @@ Module                         Description                              Use Coun
 0 modules load
 
 ```
+
+Cargar modulo de chan sip
+
+* `cd /usr/src/asterisk-certified-16.8-cert14`
+* `sudo ./configure`
+* `sudo make menuselect`
+* `sudo make`
+* `sudo make install`
+* `sudo make samples`
+* `sudo make config`
+* `sudo ldconfig`
+* `sudo /etc/init.d/asterisk restart`
+
+
 
