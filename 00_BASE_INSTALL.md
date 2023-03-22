@@ -101,4 +101,3 @@ Cargar modulo de chan sip
 Verificacion se debe conectar a la consola de asterisk: 
 * `sudo asterisk -vvvvvrc`
 
-
