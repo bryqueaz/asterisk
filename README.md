@@ -5,6 +5,14 @@ Cambio de nombre del server
 sudo hostnamectl set-hostname asterisk
 
 ```
+Verificar que /etc/hosts, tenga la IPV4 privada
+
+```
+ubuntu@asterisk:~$ cat /etc/hosts | grep asterisk
+x.x.x.x asterisk
+
+```
+
 Actualizar repos
 
 ```
