@@ -106,16 +106,18 @@ Cargar el modulo d chan_sip.so
 * `sudo vim /etc/asterisk/modules.conf`
 * Agregar la linea: `load => chan_sip.so`
 * Verificar el cambio en el archivo
-```
 ubuntu@asterisk:~$ sudo cat /etc/asterisk/modules.conf | grep chan_sip
 load => chan_sip.so
-
 ```
 * sudo /etc/init.d/asterisk restart
 
 Verificacion se debe conectar a la consola de asterisk:
 * `sudo asterisk -vvvvvrc`
-* 
+```
+asterisk*CLI> sip show peers
+Name/username             Host                                    Dyn Forcerport Comedia    ACL Port     Status      Description                      
+0 sip peers [Monitored: 0 online, 0 offline Unmonitored: 0 online, 0 offline]
+```
 
 
 
