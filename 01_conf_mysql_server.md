@@ -133,6 +133,21 @@ CREATE TABLE cdr (
     PRIMARY KEY (id)
 );
 ```
+* Probar la conexion con de odbc con isql: `sudo isql -v asterisk-mysql`
+
+```
++---------------------------------------+
+| Connected!                            |
+|                                       |
+| sql-statement                         |
+| help [tablename]                      |
+| quit                                  |
+|                                       |
++---------------------------------------+
+SQL> quit
+
+```
+
 
 
 
