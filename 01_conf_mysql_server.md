@@ -84,6 +84,56 @@ bind-address    = 0.0.0.0
 ```
 * `sudo systemctl restart mysql.service`
 
+Crear base de datos y tablas para asterisk
+
+Se debe realizar la conexion al gestor de la base de datos con el usuario root y el ingreso con el password que se definio anteriormente y ejecutar las siguientes instrucciones.
+
+```
+ubuntu@asterisk:~$  mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 66
+Server version: 8.0.32 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2023, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> 
+
+```
+* `create database asterisk;`
+* `CREATE USER 'asterisk'@'localhost' IDENTIFIED BY 'mypasss11122332';`
+* `GRANT ALL PRIVILEGES ON *.* TO 'asterisk'@'localhost';`
+* `use asterisk;`
+```
+drop table if exists cdr;
+CREATE TABLE cdr ( 
+    id int(11) AUTO_INCREMENT,
+        calldate datetime NOT NULL, 
+        clid varchar(80) NOT NULL default '', 
+        src varchar(80) NOT NULL default '', 
+        dst varchar(80) NOT NULL default '', 
+        dcontext varchar(80) NOT NULL default '', 
+        channel varchar(80) NOT NULL default '', 
+        dstchannel varchar(80) NOT NULL default '', 
+        lastapp varchar(80) NOT NULL default '', 
+        lastdata varchar(80) NOT NULL default '', 
+        duration int(11) NOT NULL default '0', 
+        billsec int(11) NOT NULL default '0', 
+        disposition varchar(45) NOT NULL default '', 
+        amaflags int(11) NOT NULL default '0', 
+        accountcode varchar(20) NOT NULL default '', 
+        uniqueid varchar(32) NOT NULL default '', 
+        userfield varchar(255) NOT NULL default '',
+    PRIMARY KEY (id)
+);
+```
+
 
 
 
