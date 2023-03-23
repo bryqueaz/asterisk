@@ -42,6 +42,21 @@ Configurar repo mysql-apt-config_0.8.12
 * `sudo apt install -f mysql-client=8.0* mysql-community-server=8.0* mysql-server=8.0*`
 * `sudo apt-get install unixodbc`
 
+Configurar MySQL connector odbc
+* `cd /usr/src/asterisk-certified-16.8-cert14/`
+* `sudo wget https://downloads.mysql.com/archives/get/p/10/file/mysql-connector-odbc-8.0.17-linux-ubuntu19.04-x86-64bit.tar.gz`
+* `sudo gunzip mysql-connector-odbc-8.0.17-linux-ubuntu19.04-x86-64bit.tar.gz`
+* `sudo tar xvf mysql-connector-odbc-8.0.17-linux-ubuntu19.04-x86-64bit.tar`
+* `cd /usr/src/asterisk-certified-16.8-cert14/mysql-connector-odbc-8.0.17-linux-ubuntu19.04-x86-64bit`
+* `sudo cp bin/* /usr/local/bin`
+* `sudo cp lib/* /usr/local/lib`
+* `sudo myodbc-installer -a -d -n "MySQL ODBC 8.0 Driver" -t "Driver=/usr/local/lib/libmyodbc8w.so"`
+* `odbcinst -j`
+* Verificar que existan los files: `ls -lah /etc/odbc.ini  /etc/odbcinst.ini`
+* Verificar que existan: `sudo find /usr -iname "*libmyodbc*`
+
+
+
 
 
 
