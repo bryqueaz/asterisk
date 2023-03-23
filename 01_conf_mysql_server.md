@@ -71,7 +71,7 @@ Driver = MySQL
 Database = asterisk
 Server = localhost
 UserName = root
-Password = 'Greencore123'
+Password = 'mypasss11122332'
 Port = 3306
 Socket = /var/run/mysqld/mysqld.sock
 ```
