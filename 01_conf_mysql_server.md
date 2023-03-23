@@ -76,6 +76,16 @@ Port = 3306
 Socket = /var/run/mysqld/mysqld.sock
 ```
 
+Configuracion de bind-address para MySQL 8
+* Editar el siguiente file `sudo vim  /etc/mysql/mysql.conf.d/mysqld.cnf`
+```
+[mysqld]
+bind-address    = 0.0.0.0
+```
+* `sudo systemctl restart mysql.service`
+
+
+
 
 
 
