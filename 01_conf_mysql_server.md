@@ -33,7 +33,6 @@ Configurar la opciones de seguridad basicas del gestor de base de datos MySQL 8
 * `sudo mysql_secure_installation`
 
 Configurar repo mysql-apt-config_0.8.12
-
 * `cd /usr/src/asterisk-certified-16.8-cert14/`
 * `sudo wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb`
 * `sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb`
@@ -54,6 +53,32 @@ Configurar MySQL connector odbc
 * `odbcinst -j`
 * Verificar que existan los files: `ls -lah /etc/odbc.ini  /etc/odbcinst.ini`
 * Verificar que existan: `sudo find /usr -iname "*libmyodbc*`
+
+Configuracion de ODBC
+* Editar el siguiente file `sudo vim /etc/odbcinst.ini`
+```[MySQL ODBC 8.0 Driver]
+Description = ODBC for MySQL
+Driver = /usr/local/lib/libmyodbc8w.so
+Setup = /usr/local/lib/libmyodbc8S.so
+FileUsage = 1
+```
+* `sudo odbcinst -i -d -f /etc/odbcinst.ini`
+* Editar el siguiente file `sudo vim /etc/odbc.ini`
+```
+[asterisk-mysql]
+Description = MySQL connection to 'asterisk' database
+Driver = MySQL
+Database = asterisk
+Server = localhost
+UserName = root
+Password = 'Greencore123'
+Port = 3306
+Socket = /var/run/mysqld/mysqld.sock
+```
+
+
+
+
 
 
 
