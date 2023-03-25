@@ -16,7 +16,12 @@ defaultlanguage = es           ; Default language
 
 Borrar toda la informacion del archivo `/etc/asterisk/sip.conf`
 
-Y definir el siguiente en el archivo
+Y definir el siguiente en el archivo `/etc/asterisk/sip.conf`
+
+Se deben cambiar los valores de las siguientes defincioes:
+
+* **externip=**
+* **localnet=**
 
 ```
 [general]
@@ -27,6 +32,22 @@ bindport=5060
 ;udpbindaddr=0.0.0.0:5060
 ;realm=3.211.79.51;
 transport=udp
+
+; fin webrtc
+
+externip=ip_publica
+localnet=ip_interna
+
+srvlookup=no
+disallow=all
+;allow=g729
+allow=ulaw
+allow=alaw
+;allow=gsm
+nat=force_rport,comedia
+language=es
+rtcachefriends=yes
+#include sip_manual.conf
 ```
 
 
