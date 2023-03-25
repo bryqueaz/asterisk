@@ -54,6 +54,9 @@ rtcachefriends=yes
 * `cd /etc/asterisk`
 * `sudo touch sip_manual.conf`
 * Incluir el siguiente contenido en el archivo `sip_manual.conf`
+
+Importante se debe cambiar el valor de **1010** por el valor de la extesion que corresponda. 
+
 ```
 [1010]
 host=dynamic
