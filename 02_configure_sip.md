@@ -131,6 +131,8 @@ LIMITCALL=300000
 ```
 * `sudo vim /etc/asterisk/troncales.conf`
 
+
+
 ```
 [config](!)
 type=friend
@@ -160,6 +162,8 @@ insecure=invite
 user=217503
 secret=EJsx6bE009dG
 ```
+
+
 
 
 
