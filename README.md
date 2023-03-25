@@ -13,5 +13,6 @@ Codename:       focal
 El paso a paso debe ser de la siguiente manera:
 * `00_BASE_INSTALL.md`
 * `01_conf_mysql_server.md`
+* `02_configure_sip.md`
 
 
