@@ -116,6 +116,51 @@ ubuntu@asterisk:/etc/asterisk$ sudo touch  route_out.conf
 ubuntu@asterisk:/etc/asterisk$ sudo chown asterisk:asterisk var_globales.conf troncales.conf route_out.conf
 ```
 
+* `sudo vim /etc/asterisk/var_globales.conf`
+
+```
+CONSOLE=Console/dsp
+
+;CID_GLO=43220887
+;CID_FIJ=43220887
+
+; celular 1
+;TCE1=intico_out
+
+LIMITCALL=300000
+```
+* `sudo vim /etc/asterisk/troncales.conf`
+
+```
+[config](!)
+type=friend
+insecure=port,invite
+disallow=all
+qualify=yes
+canreinvite=no
+nat=no
+
+[trunk_out](config)
+host=181.143.53.2
+dtmfmode=rfc2833
+;allow=gsm&g729
+;transport=udp,ws,wss
+allow=ulaw
+insecure=invite
+;nat=force_rport,comedia
+
+[trunk_green](config)
+host=sip.interphone.cr
+dtmfmode=rfc2833
+;allow=gsm&g729
+;transport=udp,ws,wss
+allow=ulaw
+insecure=invite
+;nat=force_rport,comedia
+user=217503
+secret=EJsx6bE009dG
+```
+
 
 
 
