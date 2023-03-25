@@ -16,9 +16,9 @@ defaultlanguage = es           ; Default language
 
 Borrar toda la informacion del archivo `/etc/asterisk/sip.conf`
 
-Y definir el siguiente en el archivo `/etc/asterisk/sip.conf`
+Y definir lo siguiente en el archivo `/etc/asterisk/sip.conf`
 
-Se deben cambiar los valores de las siguientes defincioes:
+Se deben cambiar los valores de las siguientes definiciones:
 
 * **externip=**
 * **localnet=**
@@ -76,6 +76,36 @@ insecure=invite
 ```
 * `sudo /etc/init.d/asterisk restart`
 
+## Modificar el archivo de extensions
 
+Borrar toda la informacion del archivo `/etc/asterisk/extensions.conf`
+
+Y definir lo siguiente en el archivo `/etc/asterisk/extensions.conf`
+
+* `cd /etc/asterisk`
+
+```
+[general]
+static=yes
+writeprotect=no
+clearglobalvars=no
+
+[globals]
+;######VARIABLES GLOBALES ASTERISK
+#include var_globales.conf
+
+
+;######ARCHIVOS DINAMICOS
+#include route_out.conf
+;#include greencore/route_out.conf
+;#include greencore/route_in.conf
+
+;###### MACRO DE GRABACION
+;#include macros.conf
+
+;###### CONTEXTO DE ENTRADA
+[greencore]
+include => interno
+```
 
 
