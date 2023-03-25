@@ -50,6 +50,29 @@ rtcachefriends=yes
 #include sip_manual.conf
 ```
 
+## Configurar una extesion sip en modo CDR
+* `cd /etc/asterisk`
+* `sudo touch sip_manual.conf`
+* Incluir el siguiente contenido en el archivo `sip_manual.conf`
+```
+[1010]
+host=dynamic
+secret=1010
+type=friend
+insecure=port,invite
+disallow=all
+qualify=yes
+canreinvite=no
+nat=no
+dtmfmode=rfc2833
+;allow=gsm&g729
+;transport=udp,ws,wss
+allow=ulaw
+insecure=invite
+;nat=force_rport,comedia
+```
+* `sudo /etc/init.d/asterisk restart`
+
 
 
 
