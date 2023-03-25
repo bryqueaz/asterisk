@@ -107,5 +107,21 @@ clearglobalvars=no
 [greencore]
 include => interno
 ```
+Ejecutar los siguientes desde la consola, creacion de archivos y permisos
+
+```
+ubuntu@asterisk:/etc/asterisk$ sudo touch  var_globales.conf
+ubuntu@asterisk:/etc/asterisk$ sudo vim /etc/asterisk/extensions.conf 
+ubuntu@asterisk:/etc/asterisk$ sudo touch  troncales.conf
+ubuntu@asterisk:/etc/asterisk$ sudo vim /etc/asterisk/extensions.conf 
+ubuntu@asterisk:/etc/asterisk$ sudo touch  route_out.conf
+ubuntu@asterisk:/etc/asterisk$ sudo vim /etc/asterisk/extensions.conf
+ubuntu@asterisk:/etc/asterisk$ sudo chown asterisk:asterisk var_globales.conf troncales.conf route_out.conf
+```
+
+
+
+
+
 
 
